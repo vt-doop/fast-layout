@@ -1,0 +1,249 @@
+/* box3.0 by doop 有问题 请到 q群 : 141019281 反馈 谢谢使用*/
+/*给予 自定标签 属性*/
+        [  lt], [  ht], [  rt], 
+        [  lv], [  hv], [  rv], 
+        [  lb], [  hb], [  rb], 
+        [  l ], [  h ], [  r ], 
+                                [  jt],
+                                [  jv],
+                                [  jb],
+        [  ls], [  hs], [  rs], [  js],
+[h-  ], [h-l ], [h-h ], [h-r ], [h-j ],
+[h-t ], [h-lt], [h-ht], [h-rt], [h-jt],
+[h-v ], [h-lv], [h-hv], [h-rv], [h-jv],
+[h-b ], [h-lb], [h-hb], [h-rb], [h-jb],
+[h-s ], [h-ls], [h-hs], [h-rs], [h-js],h,
+                                
+[  t],                          [  st],
+[  v],                          [  sv],
+[  b],                          [  sb],
+        [  lj], [  hj], [  rj], [  sj],
+[v-  ],  [v-l ], [v-h ], [v-r ], [v-s ],
+[v-t ], [v-lt], [v-ht], [v-rt], [v-st],
+[v-v ], [v-lv], [v-hv], [v-rv], [v-sv],
+[v-b ], [v-lb], [v-hb], [v-rb], [v-sb],
+[v-j ], [v-lj], [v-hj], [v-rj], [v-sj],v,
+
+
+[  j ], [  x ], [box ]
+{
+    display :      -o-box;
+    display :     -ms-box;
+    display :    -moz-box;
+    display : -webkit-box;
+}
+/*        [  lt], [  ht], [  rt], 
+        [  lv], [  hv], [  rv], 
+        [  lb], [  hb], [  rb], 
+        [  l ], [  h ], [  r ],*/
+/*                                [  jt],
+                                [  jv],
+                                [  jb],
+        [  ls], [  hs], [  rs], [  js],*/
+[h-  ], [h-l ], [h-h ], [h-r ], [h-j ],
+[h-t ], [h-lt], [h-ht], [h-rt], [h-jt],
+[h-v ], [h-lv], [h-hv], [h-rv], [h-jv],
+[h-b ], [h-lb], [h-hb], [h-rb], [h-jb],
+[h-s ], [h-ls], [h-hs], [h-rs], [h-js],
+ h
+{/*自定标签： X轴排序的标签*/
+         -o-box-orient : horizontal;
+        -ms-box-orient : horizontal;
+       -moz-box-orient : horizontal;
+    -webkit-box-orient : horizontal;
+}
+/*[  t],                          [  st],
+[  v],                          [  sv],
+[  b],                          [  sb],
+        [  lj], [  hj], [  rj], [  sj],*/
+[v-  ], [v-l ], [v-h ], [v-r ], [v-s ],
+[v-t ], [v-lt], [v-ht], [v-rt], [v-st],
+[v-v ], [v-lv], [v-hv], [v-rv], [v-sv],
+[v-b ], [v-lb], [v-hb], [v-rb], [v-sb],
+[v-j ], [v-lj], [v-hj], [v-rj], [v-sj],
+ v    ,  v[l ],  v[h ],  v[r ]
+         v[lt],  v[ht],  v[rt]
+         v[lv],  v[hv],  v[rv]
+         v[lb],  v[hb],  v[rb]
+{/*自定标签： Y轴排序的标签*/
+         -o-box-orient : vertical;
+        -ms-box-orient : vertical;
+       -moz-box-orient : vertical;
+    -webkit-box-orient : vertical;
+}
+/*        [  ls], [  hs], [  rs], [  js],
+[h-s ], [h-ls], [h-hs], [h-rs], [h-js],
+[  st],
+[  sv],
+[  sb],
+[  sj],
+[v-s ],
+[v-st],
+[v-sv],
+[v-sb],
+[v-sj],
+[x]
+
+{/*使子级元素撑满父元素
+         -o-box-align : stretch;
+        -ms-box-align : stretch;
+       -moz-box-align : stretch;
+    -webkit-box-align : stretch;
+}*/
+/*替代*/
+/*使子级元素撑满父元素*/
+/*内部使用abs元素的时候 会丢失宽高 原因是优先级不够
+ */
+  [x ] > *,
+ h[s ] > *, [  ls] > *,[  hs] > *,[  rs] > *,[  js] > *,
+[h-s ] > *, [h-ls] > *,[h-hs] > *,[h-rs] > *,[h-js] > *{
+    height: auto;
+}
+
+ v[s] > *, [  st] > *,[  sv] > *,[  sb] > *,[  sj] > *,
+[v-s] > *, [v-st] > *,[v-sv] > *,[v-sb] > *,[v-sj] > *{
+    width: auto;
+}
+
+
+[  t ],  [  lt], [  ht], [  rt], [  jt],
+[h-t ],  [h-lt], [h-ht], [h-rt], [h-jt],
+         [  lj],
+         [v-l ],/*v[l ],*/
+         [v-lt], /* v[lt],v[t],*/ /*校正*/
+         [v-lv],  v[lv], v[v],
+         [v-lb],  v[lb], v[b],
+         [v-lj]
+         
+
+{ /*使子级元素以Y轴靠上*/
+         -o-box-align : start;
+        -ms-box-align : start;
+       -moz-box-align : start;
+    -webkit-box-align : start;
+}
+[  v ], [  lv], [  hv], [  rv], [  jv],
+[h-v ], [h-lv], [h-hv], [h-rv], [h-jv],
+                [  hj],
+                [v-h ],  v[h ],
+                [v-ht],  v[ht],
+                [v-hv],/*v[hv],*/
+                [v-hb],  v[hb],
+                [v-hj]
+{/*使子级元素以Y轴居中*/
+         -o-box-align : center;
+        -ms-box-align : center;
+       -moz-box-align : center;
+    -webkit-box-align : center;
+}
+
+[  b ], [  lb], [  hb], [  rb], [  jb],
+[h-b ], [h-lb], [h-hb], [h-rb], [h-jb],
+                        [  rj],
+                        [v-r ],  v[r ],
+                        [v-rt],  v[rt],
+                        [v-rv],  v[rv],
+                        [v-rb],/*v[rb],*/
+                        [v-rj]
+{/*使子级元素以Y轴靠下*/
+         -o-box-align : end;
+        -ms-box-align : end;
+       -moz-box-align : end;
+    -webkit-box-align : end;
+}
+
+[  jt],
+[  jv],
+[  jb],
+[  js],
+[h-j ],
+[h-jt],
+[h-jv],
+[h-jb],
+[h-js],
+        [  lj], [  hj], [  rj], [  sj],
+[v-j ], [v-lj], [v-hj], [v-rj], [v-sj],
+[  j ]
+{/*子级元素会平均地分布在行里。第一个伸缩项目一行中的最开始位置，最后一个伸缩项目在一行中最终点位置。*/
+         -o-box-pack : justify;
+        -ms-box-pack : justify;
+       -moz-box-pack : justify;
+    -webkit-box-pack : justify;
+}
+          [l ],
+        [  lt],
+        [  lv],
+        [  lb],
+        [  ls],
+        [h-l ],
+        [h-lt],
+        [h-lv],
+        [h-lb],
+        [h-ls],
+                                [  st],
+[v-t ], [v-lt], [v-ht], [v-rt], [v-st],
+                 v[h ],  v[r],
+ /*v[t ],  v[lt],*/
+                 v[ht ], v[rt]
+{/*使子级元素以X轴靠左*/
+         -o-box-pack : start;
+        -ms-box-pack : start;
+       -moz-box-pack : start;
+    -webkit-box-pack : start;
+}
+                  [h ],
+                [  ht],
+                [  hv],
+                [  hb],
+                [  hs],
+                [h-h ],
+                [h-ht],
+                [h-hv],
+                [h-hb],
+                [h-hs],
+                                [  sv],
+
+[v-v ], [v-lv], [v-hv], [v-rv], [v-sv],
+ v[v ],  v[lv], /* v[hv ],*/
+                         v[rv]
+{/*使子级元素以X轴居中*/
+         -o-box-pack : center;
+        -ms-box-pack : center;
+       -moz-box-pack : center;
+    -webkit-box-pack : center;
+}
+                          [r ],
+                        [  rt],
+                        [  rv],
+                        [  rb],
+                        [  rs],
+                        [h-r ],
+                        [h-rt],
+                        [h-rv],
+                        [h-rb],
+                        [h-rs],
+                                [  sb],
+[v-b ], [v-lb], [v-hb], [v-rb], [v-sb],
+ v[b ],  v[lb],  v[hb ]/*, v[rb]*/
+{/*使子级元素以X轴靠右*/
+         -o-box-pack : end;
+        -ms-box-pack : end;
+       -moz-box-pack : end;
+    -webkit-box-pack : end;
+}
+/*自定标签： 比例属性*/
+[f1],[h1],[v1]{ -o-box-flex : 1; -ms-box-flex : 1; -moz-box-flex : 1; -webkit-box-flex : 1; }
+[f2],[h2],[v2]{ -o-box-flex : 2; -ms-box-flex : 2; -moz-box-flex : 2; -webkit-box-flex : 2; }
+[f3],[h3],[v3]{ -o-box-flex : 3; -ms-box-flex : 3; -moz-box-flex : 3; -webkit-box-flex : 3; }
+[f4],[h4],[v4]{ -o-box-flex : 4; -ms-box-flex : 4; -moz-box-flex : 4; -webkit-box-flex : 4; }
+[f5],[h5],[v5]{ -o-box-flex : 5; -ms-box-flex : 5; -moz-box-flex : 5; -webkit-box-flex : 5; }
+[f6],[h6],[v6]{ -o-box-flex : 6; -ms-box-flex : 6; -moz-box-flex : 6; -webkit-box-flex : 6; }
+[f7],[h7],[v7]{ -o-box-flex : 7; -ms-box-flex : 7; -moz-box-flex : 7; -webkit-box-flex : 7; }
+[f8],[h8],[v8]{ -o-box-flex : 8; -ms-box-flex : 8; -moz-box-flex : 8; -webkit-box-flex : 8; }
+[f9],[h9],[v9]{ -o-box-flex : 9; -ms-box-flex : 9; -moz-box-flex : 9; -webkit-box-flex : 9; }
+[f0],[h0],[v0]{ -o-box-flex :10; -ms-box-flex :10; -moz-box-flex :10; -webkit-box-flex :10; }
+
+/*自定标签： 设置宽度为0,使元素按比例分配时 宽度不会变化*/
+[h1], [h2], [h3], [h4], [h5], [h6], [h7], [h8], [h9], [h0]{ width  : 0; }
+/*自定标签： 设置高度为0,使元素按比例分配时 高度不会变化*/
+[v1], [v2], [v3], [v4], [v5], [v6], [v7], [v8], [v9], [v0]{ height : 0; }
